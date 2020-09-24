@@ -9,7 +9,7 @@ import binascii
 import json
 import pprint
 
-cap = pyshark.LiveCapture('ens192', bpf_filter='port 12201')
+cap = pyshark.LiveCapture('eth0', bpf_filter='port 12201')
 
 for packet in cap.sniff_continuously(packet_count=1000):
     try:
